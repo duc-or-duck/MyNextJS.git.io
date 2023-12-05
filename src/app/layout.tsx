@@ -1,8 +1,16 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
+import { Nunito } from 'next/font/google'
+import '../../public/globals.scss'
+import "@fortawesome/fontawesome-svg-core/styles.css"; 
+import { config } from "@fortawesome/fontawesome-svg-core";
+// Tell Font Awesome to skip adding the CSS automatically 
+// since it's already imported above
+config.autoAddCss = false; 
 
-const inter = Inter({ subsets: ['latin'] })
+
+
+
+const nunito = Nunito({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={nunito.className}>{children}</body>
     </html>
   )
 }

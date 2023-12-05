@@ -1,113 +1,208 @@
-import Image from 'next/image'
-
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
+// import Swiper and modules styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import Image from 'next/image';
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+    <div id="body">
+        <div className='bodybg'>
+          <img alt="" src="./img/photo_2023-11-29_09-40-28.jpg" />
+        </div>
+        <div id="wrapper">
+        <div id="wrapper__main">  
+          <div  className='header py-3'>
+            <div className="logo">
+              <img src="./img/image20.png" alt="Logo" />
+              <img src="./img/Group35553.png" alt="Logo" />
+            </div>
+            <div className='box'>
+
+            </div>
+            <div>
+              <button type='button' className="py-2 px-3 user btn btn-primary">
+                <i className="user__icon fa-regular fa-user"></i>
+                <p className='user__title m-0'>Tài khoản</p>
+                <i className="user__down fa-solid fa-chevron-down px-7"></i>
+              </button>
+            </div>
+          </div>
+          <div  className="banner">
+            <div className="banner__Content w-[auto] pt-6 pb-6">
+              <div className='banner-title'>
+               <span className='title'>Thách thức ẩm thực cùng</span>
+               <p className='subtitle mb-0'>Nga Sumo</p>
+              </div>
+              <span className='content w-75'>Focus these finish requirements me die money spaces hop next. Feed explore best solutions down sky re-inventing turn.</span>
+              <div className="time-box py-12">
+                <div className="container">
+                  <div className='num'>12</div>
+                  <div className='unit'>ngày</div>
+                </div>
+                <div className="container">
+                  <div className='num'>20</div>
+                  <div className='unit'>Giờ</div>
+                </div>
+                <div className="container">
+                  <div className='num'>45</div>
+                  <div className='unit'>Phút</div>
+                </div>
+                <div className="w-[100%] container">
+                  <div className='num'>24</div>
+                  <div className='unit'>Giây</div>
+                </div>
+              </div>
+              <button className='button p-1424' type='button'>
+                 <span>Tham gia ngay</span>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div id='afterbanner-container'>
+      <div className="introduction">
+          <div className="container m-0">
+            <div className="left col">
+              <img className='img' src="./img/Frame1000001182.png" alt="" />
+            </div>
+            <div className="right col py-44">
+              <div className="content">
+                <span className='mb-0 title'>Giới thiệu cuộc thi</span>
+                <p className='mb-0 text'>Eget nec leo eu tempus porta etiam odio tincidunt. Interdum facilisis id id placerat dolor odio. Gravida aliquet orci sagittis fermentum. Vulputate odio odio neque sodales lectus consectetur pretium justo. Massa massa cursus et tellus quam integer id. Sit id nunc ornare volutpat in in maecenas sagittis nunc. Nisl ultrices augue hac semper at malesuada tellus. Interdum facilisis id id placerat dolor odio. Gravida aliquet orci sagittis fermentum</p>
+              </div>
+              <div className='button'>
+                 <button className='button_btn p-1424' href="#">
+                  Xem thêm
+                 </button>
+              </div>
+            </div>
+          </div>  
       </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div id="question__title">
+         <p className="text mb-0">Danh sách câu hỏi</p>
       </div>
+      <div id="question__list">
+      
+      </div>
+      <div id="video">
+        <div className='m-0 container'>
+          <video src="./video/Snaptik.app_7187964146929995034.mp4" controls></video>
+        </div>
+      </div>
+      <div id="results">
+        <div className="container p-0">
+          <div className="text1">
+            <span className='title'>Bạn đã hoàn thành:</span>
+            <span className='count'>1/20</span>
+          </div>
+          <div className="guide">
+             <div className="guide_left guide_btn">
+              <a className='btn_sp p-0 m-0'>
+              <i className="fa-regular fa-circle-question"></i>
+                <span className="btn__title">
+                  Thể lệ và quà tặng
+                </span>             
+              </a>
+             </div>
+             <div className="guide_right guide_btn">
+              <a className='btn_sp p-0 m-0'>
+                <i className="fa-regular fa-circle-question"></i>
+                <span className="btn__title">
+                  Bảng kết quả
+                </span>
+              </a>
+             </div>
+          </div>
+        </div>
+      </div>
+      <div id="questions">
+        <div className="question">
+          <p className="question__title m-0">
+          Trong video trước khi tham gia thách đấu chị Nga Sumo đã ăn bao nhiêu tô phở?
+          </p>
+        </div>
+      </div>
+      <div id="answers__list">
+        <div className='answers'>
+          <div className='container p-0 m-0'>
+            <img src="./img/phobo-800x450.jpg" alt="" />
+            <div className='title'>
+             <p className='m-0'>2 tô</p>
+            </div>
+            <button>
+              <span>Chọn</span>
+            </button>
+          </div>
+          <div className='container p-0 m-0'>
+            <img src="./img/phobo-800x450.jpg" alt="" />
+            <div className='title'>
+             <p className='m-0'>2 tô</p>
+            </div>
+            <button>
+              <span>Chọn</span>
+            </button>
+          </div>
+          <div className='container p-0 m-0'>
+            <img src="./img/phobo-800x450.jpg" alt="" />
+            <div className='title'>
+             <p className='m-0'>2 tô</p>
+            </div>
+            <button>
+              <span>Chọn</span>
+            </button>
+          </div>
+          <div className='container p-0 m-0'>
+            <img src="./img/phobo-800x450.jpg" alt="" />
+            <div className='title'>
+             <p className='m-0'>2 tô</p>
+            </div>
+            <button>
+              <span>Chọn</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <div className="donors">
+          <div className="donors__title">
+            <span>Tài trợ cuộc thi</span>
+          </div>
+          <div className="donors__items">
+            <div className="donors-item">
+              <img src="./img/TPBANK.png" alt="" />
+            </div>
+            <div className="donors-item">
+              <img src="./img/DRNET.png" alt="" />
+            </div>
+            <div className="donors-item">
+              <img src="./img/MCV.png" alt="" />
+            </div>
+            <div className="donors-item">
+              <img src="./img/HTV.png" alt="" />
+            </div>
+            <div className="donors-item">
+              <img src="./img/CGV.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div className="footer-wrap">
+          <div className='footer-wrap1'>a</div>
+          <div className='footer-wrap2'>b</div>
+        </div>
+        <div className='footer-title'>
+           <p>Copyright © 2023 Nga Sumo, All Rights Reserved</p>
+        </div>
+      </div>
+      </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossOrigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossOrigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossOrigin="anonymous"></script>
     </main>
   )
 }

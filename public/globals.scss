@@ -1,0 +1,538 @@
+@import '~bootstrap/scss/bootstrap';
+@import "../node_modules/bootstrap/scss/bootstrap";
+// Custom.scss
+// Option B: Include parts of Bootstrap
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
+// 2. Include any default variable overrides here
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+// 4. Include any optional Bootstrap components as you like
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+// 5. Add additional custom code here
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.w-583 {
+    width: ($spacer * 36.4375);
+}
+
+.w-503 {
+    width: ($spacer * 31.4375);
+}
+
+.pt-6 {
+    padding-top: ($spacer * 7);
+}
+
+.pb-6 {
+    padding-bottom: ($spacer * 7.5);
+}
+
+.py-12 {
+    padding: ($spacer*0.75) 0;
+}
+
+.p-4 {
+    padding: ($spacer * calc(40/$spacer));
+}
+
+.py-44 {
+    padding: ($spacer * 2.75) 0;
+}
+
+.p-1424 {
+    padding: ($spacer*0.875) ($spacer*1.5);
+}
+
+.guide_btn {
+    border-radius: 100px;
+    padding: ($spacer * 0.5) ($spacer * 0.75);
+    background: var(--gray-100, #F3F4F6);
+    i {
+        font-size: ($spacer * 1.25);
+        color: var(--gray-500, #5F6368);
+    }
+}
+
+body {
+    width: 100%;
+}
+
+.button_btn {
+    text-decoration: none;
+    color: #FFF;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: ($spacer * 1.3125);
+    letter-spacing: 0.4px;
+    border-radius: 999px;
+    background: #FEA800;
+    border: none;
+}
+
+#body {
+    .bodybg {
+        position: relative;
+        img {
+            width: 100%;
+            height: auto;
+            z-index: 0;
+        }
+    }
+    #wrapper {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        &__main {
+            padding: 0 ($spacer*8);
+            width: 100%;
+            height: auto;
+            background-size: cover;
+            background-position: center;
+            .header {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 32px;
+                .logo {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 8px;
+                }
+                .box {
+                    width: auto;
+                }
+                .user {
+                    width: auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 999px;
+                    background: rgba(0, 0, 0, 0.20);
+                    color: #fff;
+                    border: none;
+                    gap: 8px;
+                    cursor: pointer;
+                    &__icon {
+                        font-size: 24px;
+                        padding-right: 3px;
+                        font-feature-settings: 'clig' off, 'liga' off;
+                    }
+                    &__title {
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 20px;
+                    }
+                    &__down {
+                        font-size: 16px;
+                    }
+                }
+            }
+            .banner {
+                &__Content {
+                    display: inline-flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    width: 50%;
+                    gap: 32px;
+                    .banner-title {
+                        width: auto;
+                        flex-direction: column;
+                        display: inline-flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        line-height: normal;
+                        .title {
+                            color: #FEA800;
+                            font-size: 48px;
+                            font-weight: 700;
+                            word-wrap: break-word;
+                            letter-spacing: -1.6px;
+                            line-height: normal;
+                        }
+                        .subtitle {
+                            color: #FEA800;
+                            font-size: 120px;
+                            font-weight: 900;
+                            line-height: 120px;
+                            word-wrap: break-word;
+                            letter-spacing: -2.462px;
+                        }
+                    }
+                    .content {
+                        width: auto;
+                        color: var(--gray-700, #2E3134);
+                        font-feature-settings: 'clig' off, 'liga' off;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 24px;
+                        letter-spacing: 0.15px;
+                    }
+                    .time-box {
+                        max-width: 100%;
+                        height: auto;
+                        display: flex;
+                        flex-direction: row;
+                        text-align: center;
+                        justify-content: center;
+                        background: #FFF9EF;
+                        border-radius: 16px;
+                        .container {
+                            padding: 0 ($spacer*2);
+                            border-right: 1px rgba(254, 167.64, 0, 0.10) solid;
+                            .num,
+                            .unit {
+                                text-transform: uppercase;
+                            }
+                            .num {
+                                color: #0E1013;
+                                font-size: 32px;
+                                font-weight: 700;
+                                text-transform: uppercase;
+                                letter-spacing: 0.25px;
+                                line-height: 44px;
+                                word-wrap: break-word
+                            }
+                            .unit {
+                                color: #80868B;
+                                font-size: 12px;
+                                font-weight: 400;
+                                line-height: 16px;
+                                letter-spacing: 0.40px;
+                                word-wrap: break-word
+                            }
+                        }
+                    }
+                    .button {
+                        border: none;
+                        background-color: #FEA800;
+                        border-radius: 999px;
+                        span {
+                            color: white;
+                            font-size: 18px;
+                            font-weight: 500;
+                            letter-spacing: 0.40px;
+                            word-wrap: break-word;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #afterbanner-container {
+        max-width: 1184px;
+        margin: 0 auto;
+        .introduction {
+            padding: 40px 0 64px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            .container {
+                display: inline-flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                background-color: #FEDD90;
+                border-radius: 32px;
+                gap: 32px;
+                padding: ($spacer * 2.5);
+                .left {
+                    .img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                .right {
+                    width: auto;
+                    display: inline-flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 24px;
+                    .content {
+                        width: 100%;
+                        height: 100%;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        gap: 16px;
+                        display: inline-flex;
+                        .title {
+                            line-height: 55px;
+                            display: inline;
+                            color: #FEA800;
+                            font-size: 40px;
+                            font-weight: 700;
+                            word-wrap: break-word
+                        }
+                        .text {
+                            height: auto;
+                            color: #2E3134;
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 28px;
+                            letter-spacing: 0.25px;
+                            word-wrap: break-word
+                        }
+                    }
+                }
+            }
+        }
+        #question__title {
+            width: 100%;
+            padding: 0 0 ($spacer * 1.1875) 0;
+            flex-direction: row;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .text {
+                color: var(--gray-900, #0E1013);
+                font-feature-settings: 'clig' off, 'liga' off;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: bold;
+                line-height: ($spacer * 2.0625);
+                letter-spacing: -0.25px;
+            }
+        }
+        #question__list {
+            padding: 0 0 ($spacer * 2.5) 0;
+        }
+        #video {
+            padding: 0 0 ($spacer * 2.5) 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .container {
+                padding: 0 ($spacer * 12.625);
+                width: 100%;
+                video {
+                    border-radius: 16px;
+                    height: auto;
+                    width: 100%;
+                }
+            }
+        }
+        #results {
+            .container {
+                display: inline-flex;
+                flex-direction: row;
+                gap: ($spacer * 1.5);
+                width: auto;
+                .text1 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 8px;
+                    .title {
+                        opacity: 0.5;
+                        color: var(--gray-500, #5F6368);
+                        font-feature-settings: 'clig' off, 'liga' off;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 24px;
+                        letter-spacing: 0.1px;
+                    }
+                    .count {
+                        color: #FEA800;
+                        font-feature-settings: 'clig' off, 'liga' off;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 24px;
+                        letter-spacing: 0.1px;
+                    }
+                }
+                .container {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    gap: 24px;
+                }
+                .guide {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    gap: 8px;
+                }
+                .btn_sp {
+                    text-decoration: none;
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+                    justify-content: center;
+                    .btn__title {
+                        color: var(--gray-500, #5F6368);
+                        font-feature-settings: 'clig' off, 'liga' off;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        letter-spacing: 0.25px;
+                    }
+                }
+            }
+        }
+        #questions {
+            padding: ($spacer * 0.25) 0 ($spacer * 1.5) 0;
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: flex-start;
+            align-content: center;
+            .question {
+                width: 60%;
+                height: auto;
+                &__title {
+                    color: #FEA800;
+                    font-feature-settings: 'clig' off, 'liga' off;
+                    font-size: 32px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    letter-spacing: -1.5px;
+                }
+            }
+        }
+        #answers__list {
+            width: 100%;
+            height: auto;
+            padding: 0 0 ($spacer * 4) 0;
+            .answers {
+                width: 100%;
+                flex-direction: row;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                gap: 32px;
+                .container {
+                    width: ($spacer * 17);
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    &:hover {
+                        cursor: pointer;
+                        img {
+                            outline: ($spacer * 0.1875) solid #FEA800;
+                        }
+                        button {
+                            background: #FEA800;
+                            span {
+                                color: white;
+                            }
+                        }
+                    }
+                    img {
+                        border-radius: ($spacer);
+                    }
+                    .title {
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        align-self: stretch;
+                        p {
+                            overflow: hidden;
+                            color: var(--gray-900, #0E1013);
+                            font-feature-settings: 'clig' off, 'liga' off;
+                            text-overflow: ellipsis;
+                            font-family: Nunito;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: ($spacer * 1.875);
+                            letter-spacing: 0.25px;
+                        }
+                    }
+                    button {
+                        border: none;
+                        border-radius: 999px;
+                        background: var(--gray-50, #F9FAFB);
+                        padding: ($spacer * 0.375) ($spacer * 1.5);
+                        span {
+                            color: var(--gray-400, #80868B);
+                            font-feature-settings: 'clig' off, 'liga' off;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: ($spacer * 2);
+                            letter-spacing: 0.25px;
+                        }
+                    }
+                }
+            }
+        }
+        #footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 64px;
+            width: 100%;
+            .donors {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 32px;
+                .donors__title {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    letter-spacing: -0.25px;
+                }
+                .donors__items {
+                    width: 100%;
+                    display: inline-flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 32px;
+                    .donors-item {
+                        padding: 20px 0;
+                        gap: 10px;
+                        flex: 1 0 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: var(--nga-sumo-light-bg, #FFF9EF);
+                        img {
+                            width: auto;
+                            height: ($spacer * 2.4375);
+                        }
+                    }
+                }
+            }
+            .footer-title {
+                color: var(--gray-500, #5F6368);
+                font-feature-settings: 'clig' off, 'liga' off;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                /* 171.429% */
+                letter-spacing: 0.1px;
+            }
+        }
+    }
+}
